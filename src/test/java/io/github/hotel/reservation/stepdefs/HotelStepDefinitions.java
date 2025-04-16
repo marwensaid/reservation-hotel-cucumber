@@ -5,13 +5,18 @@ package io.github.hotel.reservation.stepdefs;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.spring.CucumberContextConfiguration;
 import io.github.hotel.reservation.model.Reservation;
 import io.github.hotel.reservation.service.HotelService;
+import org.junit.runner.RunWith;
 
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@CucumberContextConfiguration
 public class HotelStepDefinitions {
 
     private HotelService hotelService;
